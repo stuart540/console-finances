@@ -33,12 +33,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ```md
 ![alt text](assets/images/screenshot.png)
-```
+``` -->
 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Thanks to Borislav Hadzhiev for their blog on how to [Filter an Array to only Numbers in JavaScript](https://bobbyhadz.com/blog/javascript-filter-array-to-only-numbers#:~:text=Use%20the%20filter()%20method,elements%20that%20satisfy%20the%20condition.)
+<!-- List your collaborators, if any, with links to their GitHub profiles.
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 

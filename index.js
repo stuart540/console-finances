@@ -102,12 +102,30 @@ var finances = [
 ];
 
 // Header for analysis
-console.log("Financial Analysis")
+console.log("Financial Analysis");
 
-console.log("----------------------------")
+console.log("----------------------------");
 
 // The total number of months included in the dataset.
 
-console.log("Total Months: ", finances.length)
+var totalMonth = finances.length
+
+console.log("Total Months: ", totalMonth);
 
 // The net total amount of Profit/Losses over the entire period.
+
+// PC 
+// To display total amount, the number values have to be added together.
+// The first step could be to separate the numbers into a new array - or at least target them in this array.
+
+// var onlyNumbers = finances.filter("number");
+
+// console.log(typeof finances); // object
+
+//Loop for outputting numbers to console
+
+for (var i = 0; [i],[1] < finances.length; i++) {
+    console.log(finances[i][1]);
+}
+
+// now make output to new array for sum calculation
