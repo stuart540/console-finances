@@ -126,9 +126,9 @@ console.log("Total Months: ", totalMonths);
 
 //Loop for outputting numbers to console
 
-var netProfits = []
-for (var i = 0; i < finances.length; i++) {
-    netProfits.push(finances[i][1]);
+var onlyNumbers = []
+for (var i = 0; i < totalMonths; i++) {
+    onlyNumbers.push(finances[i][1]);
     // console.log(netProfits)
 }
 
@@ -137,12 +137,41 @@ for (var i = 0; i < finances.length; i++) {
 // var monthTotal = finances.map(finances => finances.number)
 // console.log(monthTotal);
 
-var sum = 0;
-for (var n of netProfits)
-    sum += n;
+var netProfits = 0;
+for (var n of onlyNumbers)
+    netProfits += n;
 
-console.log("Net Profits Total: $", sum);
+console.log("Net Profits Total: $", netProfits);
 
 // Now output separate values of profits and losses
 // In order to calculate this the array could be filtered into 2 new arrays of positive and negative numbers. The 2 new arrays can then be totaled to obtain the values.
 
+// let number = [4, -1, 6, -2, 3, 5, -7, 7];
+
+// let array = [];
+// let tempArr = [];
+// let tempArrForNeg = [];
+// let numberLength = number.length;
+
+// for(let i = 0; i < numberLength; i++){
+   
+//    if(number[i] > 0){
+//      tempArr.push(number[i]);
+//      if(i === (numberLength - 1))
+//        array.push(tempArr);
+//    }
+//    else{
+//     array.push(tempArr);
+//     tempArrForNeg.push(number[i]);
+    
+//     array.push(tempArrForNeg);
+//     tempArr = [];
+//     tempArrForNeg = [];
+//    }
+// }
+
+// console.log(array);
+
+
+var posNum = []
+var negNum = []
