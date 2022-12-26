@@ -108,9 +108,11 @@ console.log("----------------------------");
 
 // The total number of months included in the dataset.
 
-var totalMonth = finances.length
+var totalMonths = finances.length
 
-console.log("Total Months: ", totalMonth);
+console.log("Total Months: ", totalMonths);
+
+// console.log(finances[0][1],[1][1]);
 
 // The net total amount of Profit/Losses over the entire period.
 
@@ -124,8 +126,23 @@ console.log("Total Months: ", totalMonth);
 
 //Loop for outputting numbers to console
 
-for (var i = 0; [i],[1] < finances.length; i++) {
-    console.log(finances[i][1]);
+var netProfits = []
+for (var i = 0; i < finances.length; i++) {
+    netProfits.push(finances[i][1]);
+    // console.log(netProfits)
 }
 
-// now make output to new array for sum calculation
+// Now make output to new array for sum calculation
+
+// var monthTotal = finances.map(finances => finances.number)
+// console.log(monthTotal);
+
+var sum = 0;
+for (var n of netProfits)
+    sum += n;
+
+console.log("Net Profits Total: $", sum);
+
+// Now output separate values of profits and losses
+// In order to calculate this the array could be filtered into 2 new arrays of positive and negative numbers. The 2 new arrays can then be totaled to obtain the values.
+
