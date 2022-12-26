@@ -129,8 +129,9 @@ console.log("Total Months: ", totalMonths);
 var onlyNumbers = []
 for (var i = 0; i < totalMonths; i++) {
     onlyNumbers.push(finances[i][1]);
-    // console.log(netProfits)
+
 }
+    // console.log(onlyNumbers)
 
 // Now make output to new array for sum calculation
 
@@ -175,3 +176,18 @@ console.log("Net Profits Total: $", netProfits);
 
 var posNum = []
 var negNum = []
+
+for(var i = 0; i < totalMonths; i++){
+   
+   if(onlyNumbers[i] > 0){
+     posNum.push(onlyNumbers[i]);
+     
+   }
+   else{
+    negNum.push(onlyNumbers[i]);
+    
+   }
+}
+
+console.log(posNum);
+console.log(negNum);
