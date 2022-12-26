@@ -216,7 +216,7 @@ var monthChange = followingMonth.map((n, i) => n - firstMonth[i]);
 
 // console.log(monthChange);
 
-// total sum of monthChange
+// You will need to track what the total change in profits are from month to month and then find the average.
 
 var sumMonthChange = 0;
 for (var n of monthChange)
@@ -224,6 +224,27 @@ for (var n of monthChange)
 
     // console.log(sumMonthChange);
 
+// (Total/Number of months)
 var aveChange = (sumMonthChange / monthChange.length)
 
+// You will need to track what the total change in profits are from month to month and then find the average.
+
+
 console.log("Average Change in Profits: $" + aveChange.toFixed(2));
+
+// The greatest increase in profits (date and amount) over the entire period.
+// to find the greatest increase, the largest positive number in posNum has to be identified
+// once identified this must be added to the corresponding month in original array, finances, then logged to console
+
+var bigProf = (Math.max(...posNum));
+
+console.log(bigProf);
+
+
+// The greatest decrease in losses (date and amount) over the entire period.
+// to find the greatest decrease, the largest negative number in negNum has to be identified
+// once identified this must be added to the corresponding month in original array, finances, then logged to console
+
+var bigLoss = (Math.min(...negNum));
+
+console.log(bigLoss);
