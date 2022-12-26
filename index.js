@@ -110,7 +110,7 @@ console.log("----------------------------");
 
 var totalMonths = finances.length
 
-console.log("Total Months: ", totalMonths);
+console.log("Total Months: " + totalMonths);
 
 
 
@@ -143,7 +143,7 @@ var netProfits = 0;
 for (var n of onlyNumbers)
     netProfits += n;
 
-console.log("Net Profits Total: $", netProfits);
+console.log("Net Profits Total: $" + netProfits);
 
 // Now output separate values of profits and losses
 // In order to calculate this the array could be filtered into 2 new arrays of positive and negative numbers. The 2 new arrays can then be totaled to obtain the values.
@@ -173,14 +173,14 @@ var netPosNum = 0;
 for (var n of posNum)
     netPosNum += n;
 
-console.log("of which profits: $", netPosNum);
+console.log("of which profits: $" + netPosNum);
 
 // total of negative numbers
 var netNegNum = 0;
 for (var n of negNum)
     netNegNum += n;
 
-console.log("of which profits: $", netNegNum);
+console.log("of which profits: $" + netNegNum);
 
 
 
@@ -194,8 +194,36 @@ console.log("of which profits: $", netNegNum);
 
 // First the loop
 
-var profitChange = []
-for (var i = 0; i < totalMonths; i++) {
-    profitChange.push(finances[i][1]);
+// var profitChange = []
+// for (var i = 0; i < totalMonths; i++) {
+//     profitChange.push((onlyNumbers[i])-(onlyNumbers[i++]));
 
-}
+// }
+
+// console.log(profitChange);
+
+// an alternative could be to create 2 new arrays one month apart then subtract one from the other
+
+
+var firstMonth = onlyNumbers.slice(0, -1);
+
+var followingMonth = onlyNumbers.slice(1);
+
+var monthChange = followingMonth.map((n, i) => n - firstMonth[i]);
+
+// console.log(firstMonth);
+// console.log(followingMonth);
+
+// console.log(monthChange);
+
+// total sum of monthChange
+
+var sumMonthChange = 0;
+for (var n of monthChange)
+    sumMonthChange += n;
+
+    // console.log(sumMonthChange);
+
+var aveChange = (sumMonthChange / monthChange.length)
+
+console.log("Average Change in Profits: $" + aveChange.toFixed(2));
