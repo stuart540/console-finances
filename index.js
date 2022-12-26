@@ -112,15 +112,16 @@ var totalMonths = finances.length
 
 console.log("Total Months: ", totalMonths);
 
-// console.log(finances[0][1],[1][1]);
+
+
 
 // The net total amount of Profit/Losses over the entire period.
 
 // PC 
 // To display total amount, the number values have to be added together.
-// The first step could be to separate the numbers into a new array - or at least target them in this array.
+// The first step could be to separate the numbers into a new array, or at least target them in this array.
 
-// var onlyNumbers = finances.filter("number");
+// var onlyNumbers = finances.filter("number"); //couldn't get filter to work
 
 // console.log(typeof finances); // object
 
@@ -147,33 +148,6 @@ console.log("Net Profits Total: $", netProfits);
 // Now output separate values of profits and losses
 // In order to calculate this the array could be filtered into 2 new arrays of positive and negative numbers. The 2 new arrays can then be totaled to obtain the values.
 
-// let number = [4, -1, 6, -2, 3, 5, -7, 7];
-
-// let array = [];
-// let tempArr = [];
-// let tempArrForNeg = [];
-// let numberLength = number.length;
-
-// for(let i = 0; i < numberLength; i++){
-   
-//    if(number[i] > 0){
-//      tempArr.push(number[i]);
-//      if(i === (numberLength - 1))
-//        array.push(tempArr);
-//    }
-//    else{
-//     array.push(tempArr);
-//     tempArrForNeg.push(number[i]);
-    
-//     array.push(tempArrForNeg);
-//     tempArr = [];
-//     tempArrForNeg = [];
-//    }
-// }
-
-// console.log(array);
-
-
 var posNum = []
 var negNum = []
 
@@ -189,5 +163,39 @@ for(var i = 0; i < totalMonths; i++){
    }
 }
 
-console.log(posNum);
-console.log(negNum);
+// console.log(posNum);
+// console.log(negNum);
+
+//  Now need to total both of the 2 arrays and log to console.
+
+// total of positive numbers
+var netPosNum = 0;
+for (var n of posNum)
+    netPosNum += n;
+
+console.log("of which profits: $", netPosNum);
+
+// total of negative numbers
+var netNegNum = 0;
+for (var n of negNum)
+    netNegNum += n;
+
+console.log("of which profits: $", netNegNum);
+
+
+
+// The average of the changes in Profit/Losses over the entire period.
+// First need to calculate each months change Profit/Losses, then total the amounts and divide by totalMonths
+// To calculate a single months change, the total of a months Profit/Losses has to subtracted from the following months Profit/Losses.
+
+// PC 
+// this can be achieved by creating a loop which calculates the subtraction and outputs the values to a new array.
+// this new array can then be totalled then divided by totalMonths and logged to console.
+
+// First the loop
+
+var profitChange = []
+for (var i = 0; i < totalMonths; i++) {
+    profitChange.push(finances[i][1]);
+
+}
