@@ -238,7 +238,7 @@ console.log("Average Change in Profits: $" + aveChange.toFixed(2));
 
 var bigProf = (Math.max(...posNum));
 
-console.log(bigProf);
+// console.log(bigProf);
 
 
 // The greatest decrease in losses (date and amount) over the entire period.
@@ -247,4 +247,15 @@ console.log(bigProf);
 
 var bigLoss = (Math.min(...negNum));
 
-console.log(bigLoss);
+// console.log(bigLoss);   
+
+
+var bigProfMonth = onlyNumbers.indexOf(bigProf)
+// console.log(bigProfMonth); //25
+
+console.log("The greatest increase in profits: " + finances[bigProfMonth][0] + " ($" + monthChange[bigProfMonth-1] + ")");
+
+var bigLossMonth = onlyNumbers.indexOf(bigLoss)
+// console.log(bigLossMonth);  //44
+
+console.log("The greatest decrease in profits: " + finances[bigLossMonth][0] + " ($" + monthChange[bigLossMonth-1] + ")");
