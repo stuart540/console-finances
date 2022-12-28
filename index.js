@@ -190,19 +190,20 @@ console.log("of which profits: $" + netNegNum);
 
 // PC 
 // this can be achieved by creating a loop which calculates the subtraction and outputs the values to a new array.
-// this new array can then be totalled then divided by totalMonths and logged to console.
+// this new array can then be totalled and divided by totalMonths and logged to console.
 
 // First the loop
 
 // var profitChange = []
 // for (var i = 0; i < totalMonths; i++) {
-//     profitChange.push((onlyNumbers[i])-(onlyNumbers[i++]));
+//     profitChange.push((onlyNumbers[i])-(onlyNumbers[i++]));    Couldn't get this to work.
 
 // }
 
 // console.log(profitChange);
 
-// an alternative could be to create 2 new arrays one month apart then subtract one from the other
+// new PC
+// an alternative could be to create 2 new arrays one month apart then subtract one from the other 
 
 
 var firstMonth = onlyNumbers.slice(0, -1);
@@ -253,7 +254,7 @@ var bigLoss = (Math.min(...negNum));
 var bigProfMonth = onlyNumbers.indexOf(bigProf)
 // console.log(bigProfMonth); //25
 
-console.log("The greatest increase in profits: " + finances[bigProfMonth][0] + " ($" + monthChange[bigProfMonth-1] + ")");
+console.log("The greatest increase in profits: " + finances[bigProfMonth][0] + " ($" + monthChange[bigProfMonth-1] + ")"); // -1 needed as the array monthChange has 1 element less than the original array, finances.
 
 var bigLossMonth = onlyNumbers.indexOf(bigLoss)
 // console.log(bigLossMonth);  //44
